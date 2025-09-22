@@ -101,11 +101,11 @@ p, li { font-size: 1rem; margin-bottom: 0.75rem; max-width: 700px; }
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.2rem;
+  gap: 1grem;
 }
 .card {
   background: white;
-  padding: 1.5rem;
+  padding: 1.2rem;
   border-radius: 8px;
   box-shadow: 0 4px 14px rgba(0,0,0,0.08);
   text-align: left;
