@@ -110,11 +110,14 @@ p, li { font-size: 1rem; margin-bottom: 0.75rem; max-width: 700px; }
 }
 .card {
   background: white;
-  padding: 1.2rem;
+  padding: 1.6rem;
   border-radius: 8px;
   box-shadow: 0 4px 14px rgba(0,0,0,0.08);
   text-align: left;
   transition: transform 0.2s ease;
+}
+.card ul {
+  padding-left: 1.1rem;
 }
 .card:hover {
   transform: translateY(-4px);
@@ -159,7 +162,7 @@ p, li { font-size: 1rem; margin-bottom: 0.75rem; max-width: 700px; }
 footer {
   background: rgb(56, 90, 147);
   color: white;
-  padding: 1.5rem 2rem;
+  padding: 2.25rem 3rem;
   margin-top: 2rem;
 }
 
@@ -183,7 +186,7 @@ footer {
 .footer-links {
   display: flex;
   align-items: center;
-  gap: 1.75rem;
+  gap: 2.5rem;
   flex-wrap: wrap;
 }
 
