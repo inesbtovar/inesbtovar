@@ -66,8 +66,11 @@ p, li { font-size: 1rem; }
 }
 .navbar .logo { font-family: var(--font-display); font-size: 1.15rem; color: var(--ink); text-decoration: none; }
 .navbar .nav-links { display: flex; list-style: none; gap: 1.75rem; align-items: center; }
-.navbar a { color: var(--ink-soft); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: color 0.2s; }
-.navbar a:hover, .navbar a.active { color: var(--accent); }
+.navbar a { color: var(--ink-soft); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: color 0.2s; position: relative; padding-bottom: 2px; }
+.navbar a:hover, .navbar a.active { color: var(--ink); }
+.navbar a.active::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: -4px; height: 2px; background: var(--accent);
+}
 .navbar a.nav-cta {
   font-family: var(--font-mono); font-size: 0.82rem; color: var(--ink);
   border: 1px solid var(--ink); padding: 0.4rem 0.9rem; border-radius: 4px;
@@ -91,8 +94,6 @@ p, li { font-size: 1rem; }
 .pill:hover { border-color: var(--accent); color: var(--accent); }
 
 .framed { position: relative; }
-.framed::before, .framed::after,
-.framed { }
 .framed::before {
   content: ""; position: absolute; top: -8px; left: -8px; width: 22px; height: 22px;
   border-top: 2px solid var(--accent); border-left: 2px solid var(--accent);
@@ -115,6 +116,7 @@ p, li { font-size: 1rem; }
 .btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
 
 /* ---------- Toolbelt ---------- */
+.toolbelt-intro { max-width: 52ch; margin: -1.25rem auto 2.5rem; text-align: center; color: var(--ink-soft); font-size: 0.98rem; }
 .toolbelt { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 2rem; }
 .tool-col { border-top: 2px solid var(--ink); padding-top: 1rem; }
 .tool-index { font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent-warm); }
