@@ -123,7 +123,8 @@ p, li { font-size: 1rem; }
 .tool-desc { color: var(--ink-soft); font-size: 0.95rem; }
 
 /* ---------- Projects ---------- */
-.projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.75rem; padding: 0 1.75rem; }
+.projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(420px, 1fr)); gap: 1.75rem; padding: 0 1.75rem; }
+.projects-grid > *:last-child:nth-child(odd) { grid-column: 1 / -1; max-width: calc(50% - 0.875rem); margin: 0 auto; }
 .project-card {
   display: block; text-decoration: none; color: inherit; background: var(--bg);
   border: 1px solid var(--line); border-radius: 4px; overflow: hidden; padding: 1.25rem;
