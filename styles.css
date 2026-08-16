@@ -251,3 +251,32 @@ a:focus-visible, button:focus-visible {
 }
 .cs-footer-link { color: inherit; text-decoration: none; }
 .cs-footer-link:hover { color: var(--accent-warm); }
+
+.cs-video-slot {
+  max-width: 640px; margin: 0 auto; padding: 0 1.75rem;
+}
+.cs-video-slot .slot-inner {
+  border: 1.5px dashed var(--line); border-radius: 6px; background: var(--bg-alt);
+  aspect-ratio: 16/9; display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 0.75rem; text-align: center; padding: 1.5rem;
+}
+.slot-play {
+  width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid var(--ink-soft);
+  display: flex; align-items: center; justify-content: center; color: var(--ink-soft);
+}
+.cs-video-slot .slot-note { font-family: var(--font-mono); font-size: 0.8rem; color: var(--ink-soft); max-width: 30ch; }
+.cs-video-slot .slot-path { color: var(--accent); }
+
+.cs-table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+.cs-table th, .cs-table td { text-align: left; padding: 0.65rem 0.9rem; border-bottom: 1px solid var(--line); }
+.cs-table th { font-family: var(--font-mono); font-size: 0.72rem; text-transform: uppercase; color: var(--accent); font-weight: 500; }
+.cs-table td.cs-week { font-family: var(--font-mono); font-size: 0.8rem; color: var(--ink-soft); white-space: nowrap; }
+.cs-table-wrap { max-width: 900px; margin: 0 auto; overflow-x: auto; padding: 0 1.75rem; }
+
+.cs-quote { max-width: 640px; margin: 1.5rem auto; padding: 1.1rem 1.4rem; background: var(--bg-alt); border-left: 3px solid var(--accent); border-radius: 4px; font-size: 0.95rem; }
+.cs-quote strong { display: block; font-family: var(--font-mono); font-size: 0.72rem; color: var(--accent-warm); margin-bottom: 0.4rem; text-transform: uppercase; }
+
+.cs-kpi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1.25rem; max-width: 900px; margin: 0 auto; padding: 0 1.75rem; }
+.cs-kpi { border-top: 2px solid var(--ink); padding-top: 0.75rem; }
+.cs-kpi-value { display: block; font-family: var(--font-display); font-size: 1.6rem; color: var(--ink); }
+.cs-kpi-label { font-family: var(--font-mono); font-size: 0.78rem; color: var(--ink-soft); }
