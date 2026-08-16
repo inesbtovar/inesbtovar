@@ -280,3 +280,7 @@ a:focus-visible, button:focus-visible {
 .cs-kpi { border-top: 2px solid var(--ink); padding-top: 0.75rem; }
 .cs-kpi-value { display: block; font-family: var(--font-display); font-size: 1.6rem; color: var(--ink); }
 .cs-kpi-label { font-family: var(--font-mono); font-size: 0.78rem; color: var(--ink-soft); }
+
+.cs-swatch-row { display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; max-width: 900px; margin: 1rem auto 0; padding: 0 1.75rem; }
+.cs-swatch { width: 56px; height: 56px; border-radius: 6px; border: 1px solid var(--line); flex-shrink: 0; }
+.cs-swatch-label { font-family: var(--font-mono); font-size: 0.8rem; color: var(--ink-soft); }
