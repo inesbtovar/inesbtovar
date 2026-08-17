@@ -1,6 +1,10 @@
 /* ---------- Reset ---------- */
 * { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; font-size: 16px; }
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  overflow-x: hidden;
+}
 
 /* ---------- Tokens ---------- */
 :root {
@@ -25,6 +29,7 @@ body {
   line-height: 1.6;
   color: var(--ink);
   background: var(--bg);
+  overflow-x: hidden;
 }
 
 /* ---------- Typography ---------- */
@@ -117,13 +122,13 @@ p, li { font-size: 1rem; }
 
 /* ---------- Toolbelt ---------- */
 .toolbelt-intro { max-width: 52ch; margin: -1.25rem auto 2.5rem; text-align: center; color: var(--ink-soft); font-size: 0.98rem; }
-.toolbelt { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 2rem; }
+.toolbelt { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr)); gap: 2rem; }
 .tool-col { border-top: 2px solid var(--ink); padding-top: 1rem; }
 .tool-index { font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent-warm); }
 .tool-desc { color: var(--ink-soft); font-size: 0.95rem; }
 
 /* ---------- Projects ---------- */
-.projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(420px, 1fr)); gap: 1.75rem; padding: 0 1.75rem; }
+.projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(420px, 100%), 1fr)); gap: 1.75rem; padding: 0 1.75rem; }
 .projects-grid > *:last-child:nth-child(odd) { grid-column: 1 / -1; max-width: calc(50% - 0.875rem); margin: 0 auto; }
 .project-card {
   display: block; text-decoration: none; color: inherit; background: var(--bg);
@@ -239,8 +244,8 @@ a:focus-visible, button:focus-visible {
 .cs-block:last-child { margin-bottom: 0; }
 
 .cs-grid-2, .cs-grid-3 { display: grid; gap: 1.5rem; padding: 0 1.75rem; max-width: 1120px; margin: 0 auto; }
-.cs-grid-2 { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
-.cs-grid-3 { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+.cs-grid-2 { grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr)); }
+.cs-grid-3 { grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr)); }
 .cs-block .cs-grid-2 { padding: 0; }
 
 .cs-figure { margin: 0; }
@@ -250,6 +255,8 @@ a:focus-visible, button:focus-visible {
   font-family: var(--font-mono); font-size: 0.78rem; color: var(--ink-soft);
   margin-top: 0.6rem; text-align: center;
 }
+.cs-embed { display: flex; flex-direction: column; align-items: center; }
+.cs-embed .instagram-media { width: 100% !important; }
 .cs-footer-link { color: inherit; text-decoration: none; }
 .cs-footer-link:hover { color: var(--accent-warm); }
 
@@ -277,7 +284,7 @@ a:focus-visible, button:focus-visible {
 .cs-quote { max-width: 640px; margin: 1.5rem auto; padding: 1.1rem 1.4rem; background: var(--bg-alt); border-left: 3px solid var(--accent); border-radius: 4px; font-size: 0.95rem; }
 .cs-quote strong { display: block; font-family: var(--font-mono); font-size: 0.72rem; color: var(--accent-warm); margin-bottom: 0.4rem; text-transform: uppercase; }
 
-.cs-kpi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1.25rem; max-width: 900px; margin: 0 auto; padding: 0 1.75rem; }
+.cs-kpi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(180px, 100%), 1fr)); gap: 1.25rem; max-width: 900px; margin: 0 auto; padding: 0 1.75rem; }
 .cs-kpi { border-top: 2px solid var(--ink); padding-top: 0.75rem; }
 .cs-kpi-value { display: block; font-family: var(--font-display); font-size: 1.6rem; color: var(--ink); }
 .cs-kpi-label { font-family: var(--font-mono); font-size: 0.78rem; color: var(--ink-soft); }
